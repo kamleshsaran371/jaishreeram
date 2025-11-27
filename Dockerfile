@@ -33,6 +33,5 @@ RUN pip3 install --no-cache-dir --upgrade pip \
     && pip3 install --no-cache-dir --upgrade -r sainibots.txt \
     && python3 -m pip install -U yt-dlp
 
-# Change to modules directory and run main.py
-WORKDIR /app/modules
+# Run main.py directly from root
 CMD ["python3", "main.py"]
