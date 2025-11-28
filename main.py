@@ -230,10 +230,14 @@ def reset_and_set_commands():
         "language_code": "en"
     })
     
-if __name__ == "__main__":
+if name == "main":
+    # DEBUG: Check if environment variables are loaded
+    print("=== DEBUG INFO ===")
+    print(f"API_ID: {os.environ.get('API_ID')}")
+    print(f"API_HASH: {os.environ.get('API_HASH')}")
+    print(f"BOT_TOKEN: {os.environ.get('BOT_TOKEN')}")
+    print("==================")
+    
     reset_and_set_commands()
     notify_owner()
-    
-    # Force bot mode
-    bot.start(bot_token=os.environ.get("BOT_TOKEN"))
-    bot.run()
+    bot.run()  # ✅ Original line - yehi sahi hai
