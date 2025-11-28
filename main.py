@@ -230,8 +230,10 @@ def reset_and_set_commands():
         "language_code": "en"
     })
     
-if __name__ == "__main__":
+if name == "main":
     reset_and_set_commands()
-    notify_owner() 
-
-bot.run()
+    notify_owner()
+    
+    # Force bot mode
+    bot.start(bot_token=os.environ.get("BOT_TOKEN"))
+    bot.run()
