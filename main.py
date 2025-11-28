@@ -230,7 +230,7 @@ def reset_and_set_commands():
         "language_code": "en"
     })
     
-if name == "main":
+if __name__ == "__main__":
     reset_and_set_commands()
     notify_owner()
     
