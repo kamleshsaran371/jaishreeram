@@ -230,7 +230,7 @@ def reset_and_set_commands():
         "language_code": "en"
     })
     
-if name == "main":
+if __name__ == "__main__":
     # DEBUG: Check if environment variables are loaded
     print("=== DEBUG INFO ===")
     print(f"API_ID: {os.environ.get('API_ID')}")
